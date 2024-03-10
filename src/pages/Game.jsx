@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react';
 import  questions from '../data/CountryCapitals.json';
-
+import Score from './Score'
 
 const shuffleAnswer = (question) => {
     const answer = [question.correct, ...question.incorrect];
@@ -23,7 +23,8 @@ function Game(){
     const[currentQuestion, setCurrentQuestion] = useState(questions[0]);
     const[answers,setAnswer]=useState([]);
     const[selectedAnswer, setSelectedAnswer]= useState(null);
-    const[scoreCount, setscoreCount]= useState(0);
+    const[scoreCount, setScoreCount]= useState(0);
+    const[isEnd, setIsEnd]=useState(false);
 
     useEffect(()=>{
         const question = questions[currentQuestionIndex];
@@ -36,7 +37,7 @@ function Game(){
         setSelectedAnswer(answer);
 
         if(answer === currentQuestion.correct){
-            setscoreCount(scoreCount+1);
+            setScoreCount(scoreCount + 1);
         }
 
         setTimeout(() => {
@@ -45,6 +46,7 @@ function Game(){
 
             if(newIndex === questions.length){
 
+              setIsEnd(true);
                 console.log("puzzle finished");
                 console.log("score"+scoreCount);
             }else{
@@ -52,10 +54,13 @@ function Game(){
                 setSelectedAnswer(null);
             }
               
-        }, 1000);
+        }, 800);
 
+    }
 
+    if(isEnd=== true){
 
+        return <Score scoreCount={scoreCount}/>
 
     }
 
@@ -74,8 +79,6 @@ return (<>
                 </ul>
 
             </div>
-
-
 
          </section>
 
