@@ -1,8 +1,9 @@
 import {useState,useEffect} from 'react';
+import  questions from '../data/CountryCapitals.json';
 
 
 
-function Game({questions}){
+function Game(){
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const[currentQuestion, setCurrentQuestion] = useState(questions[0]);
@@ -16,7 +17,13 @@ function Game({questions}){
 
 return (<>
          <section>
-            
+            <div>               
+                 {currentQuestionIndex+1}/{questions.length}
+            </div>
+            <div>
+                <h4>{currentQuestion.question}</h4>
+            </div>
+
 
          </section>
 
