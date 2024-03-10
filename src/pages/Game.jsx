@@ -1,3 +1,4 @@
+
 import {useState,useEffect} from 'react';
 import  questions from '../data/CountryCapitals.json';
 import Score from './Score'
@@ -91,3 +92,4 @@ return (<>
 }
 
 export default Game;
+
