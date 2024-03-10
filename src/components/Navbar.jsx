@@ -1,11 +1,11 @@
-import { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useLocation } from "react-router-dom"
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'Game', href: '#', current: false },
-  { name: 'Scores', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'Game', href: '/Game', current: false },
+  { name: 'Scores', href: '/Score', current: false },
 ]
 
 function classNames(...classes) {
@@ -13,6 +13,13 @@ function classNames(...classes) {
 }
 
 function Navbar() {
+  const location = useLocation()
+  
+   navigation.forEach((item) => {
+     item.current = item.href === location.pathname
+   })
+
+
   return (
     <Disclosure as="nav" className="bg-cyan-600">
       {({ open }) => (
