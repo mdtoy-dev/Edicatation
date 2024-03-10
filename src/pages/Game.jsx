@@ -2,6 +2,8 @@ import {useState,useEffect} from 'react';
 import  questions from '../data/CountryCapitals.json';
 import Score from './Score'
 
+
+/*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
     const answer = [question.correct, ...question.incorrect];
 
@@ -26,12 +28,14 @@ function Game(){
     const[scoreCount, setScoreCount]= useState(0);
     const[isEnd, setIsEnd]=useState(false);
 
+/*sets currentquestion and Answer everytime, based on questionIndex changes */
     useEffect(()=>{
         const question = questions[currentQuestionIndex];
         setCurrentQuestion(question);
         setAnswer(shuffleAnswer(question));
     },[currentQuestionIndex]);
 
+    /* Function to  displaynextquestion,calculate score based on the answer and End the quiz*/
     const chooseAnswer= (answer) => {
       
         setSelectedAnswer(answer);
@@ -54,7 +58,7 @@ function Game(){
                 setSelectedAnswer(null);
             }
               
-        }, 800);
+        }, 900);
 
     }
 
