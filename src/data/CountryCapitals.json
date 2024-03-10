@@ -1,0 +1,53 @@
+[
+   {
+    "question": "What's the capital city of spain",
+    "correct": "Madrid",
+    "incorrect": ["Myanmar","Colombo","Badulla"]
+   },
+   {
+    "question": "What is the capital of India?",
+    "correct": "NewDelhi",
+    "incorrect": ["NewYork","London","Ankara"]
+   },
+   {
+    "question": "What is the capital of Germany",
+    "correct": "Berlin",
+    "incorrect": ["ottawa","kyiv","Abuja"]
+   },
+   {
+    "question": "What is the capital of Australia",
+    "correct": "Canberra",
+    "incorrect": ["Vienna","seoul","Oslo"]
+   },
+   {
+    "question": "What is the capital of Turkey",
+    "correct": "Ankara",
+    "incorrect": ["Cairo","Hanoi","Brussels"]
+   },
+   {
+    "question": "What is the capital of France",
+    "correct": "Paris",
+    "incorrect": ["Quito","Pristina","Pyongyang"]
+   },
+   {
+    "question": "What is the capital of Nigeria",
+    "correct": "Abuja",
+    "incorrect": ["Baatar","Rome","Ankara"]
+   },
+   {
+    "question": "What is the capital of China",
+    "correct": "Beijing",
+    "incorrect": ["Brastilava","Reykjavik","Ulaan"]
+   },
+   {
+    "question": "What is the capital of Ireland",
+    "correct": "Dublin",
+    "incorrect": ["Kabul","Africa","Paris"]
+   },
+   {
+    "question": "What is the capital of Netherland",
+    "correct": "Amsterdam",
+    "incorrect": ["ottawa","Pyongyang","Ankara"]
+   }
+
+]
