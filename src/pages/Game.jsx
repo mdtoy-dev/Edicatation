@@ -71,21 +71,26 @@ function Game(){
 
 
 return (<>
-         <section>
-            <div>               
-                 {currentQuestionIndex+1}/{questions.length}
+   <div className="flex items-center justify-center h-screen">
+         <section className="max-w-lg bg-white shadow-md rounded-md p-6">
+            <div className="font-bold text-lg mb-2">               
+                Questions: {currentQuestionIndex+1}/{questions.length}
             </div>
-            <div>
-                <h4>{currentQuestion.question}</h4>
+            <div className="mb-4 ">
+                <h4 className="text-xl font-bold mb-2">{currentQuestion.question}</h4>
                 <ul>
                 {answers.map((answer, index) => (
-                            <li key={index} onClick={()=>chooseAnswer(answer)}><button>{answer}</button></li>
+                            <li className="mb-2 flex justify-center" key={index} >
+                            <button className="bg-cyan-600 hover:bg-green-400  text-white  font-bold py-2 px-4 rounded"
+                            onClick={()=>chooseAnswer(answer)}
+                            >{answer}</button></li>
                         ))}
                 </ul>
 
             </div>
 
          </section>
+         </div>
 
        </>)
 
