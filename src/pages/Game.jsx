@@ -2,7 +2,7 @@ import {useState,useEffect} from 'react';
 import  questions from '../data/CountryCapitals.json';
 
 
-const shuffleAnswer = question => {
+const shuffleAnswer = (question) => {
     const answer = [question.correct, ...question.incorrect];
 
     for (let i=0; i< answer.length;i++){
@@ -22,15 +22,42 @@ function Game(){
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const[currentQuestion, setCurrentQuestion] = useState(questions[0]);
     const[answers,setAnswer]=useState([]);
+    const[selectedAnswer, setSelectedAnswer]= useState(null);
+    const[scoreCount, setscoreCount]= useState(0);
 
     useEffect(()=>{
         const question = questions[currentQuestionIndex];
         setCurrentQuestion(question);
         setAnswer(shuffleAnswer(question));
-    },[currentQuestion]);
+    },[currentQuestionIndex]);
+
+    const chooseAnswer= (answer) => {
+      
+        setSelectedAnswer(answer);
+
+        if(answer === currentQuestion.correct){
+            setscoreCount(scoreCount+1);
+        }
+
+        setTimeout(() => {
+          
+            const newIndex = currentQuestionIndex + 1
+
+            if(newIndex === questions.length){
+
+                console.log("puzzle finished");
+                console.log("score"+scoreCount);
+            }else{
+                setCurrentQuestionIndex(newIndex);
+                setSelectedAnswer(null);
+            }
+              
+        }, 1000);
 
 
 
+
+    }
 
 
 return (<>
@@ -42,7 +69,7 @@ return (<>
                 <h4>{currentQuestion.question}</h4>
                 <ul>
                 {answers.map((answer, index) => (
-                            <li key={index}>{answer}</li>
+                            <li key={index} onClick={()=>chooseAnswer(answer)}><button>{answer}</button></li>
                         ))}
                 </ul>
 
