@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom"
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Game', href: '/Game', current: false },
-  { name: 'Scores', href: '/Score', current: false },
+  { name: 'Game', href: '/game', current: false },
+  { name: 'Scores', href: '/score', current: false },
 ]
 
 function classNames(...classes) {
