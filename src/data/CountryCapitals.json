@@ -1,53 +1,52 @@
 [
-   {
-    "question": "What's the capital city of spain",
+  {
+    "question": "What's the capital city of Spain?",
     "correct": "Madrid",
-    "incorrect": ["Myanmar","Colombo","Badulla"]
-   },
-   {
+    "incorrect": ["Barcelona", "Lisbon", "Valencia"]
+  },
+  {
     "question": "What is the capital of India?",
-    "correct": "NewDelhi",
-    "incorrect": ["NewYork","London","Ankara"]
-   },
-   {
-    "question": "What is the capital of Germany",
+    "correct": "New Delhi",
+    "incorrect": ["Mumbai", "Bangalore", "Kolkata"]
+  },
+  {
+    "question": "What is the capital of Germany?",
     "correct": "Berlin",
-    "incorrect": ["ottawa","kyiv","Abuja"]
-   },
-   {
-    "question": "What is the capital of Australia",
+    "incorrect": ["Hamburg", "Munich", "Frankfurt"]
+  },
+  {
+    "question": "What is the capital of Australia?",
     "correct": "Canberra",
-    "incorrect": ["Vienna","seoul","Oslo"]
-   },
-   {
-    "question": "What is the capital of Turkey",
+    "incorrect": ["Sydney", "Melbourne", "Brisbane"]
+  },
+  {
+    "question": "What is the capital of Turkey?",
     "correct": "Ankara",
-    "incorrect": ["Cairo","Hanoi","Brussels"]
-   },
-   {
-    "question": "What is the capital of France",
+    "incorrect": ["Istanbul", "Izmir", "Bursa"]
+  },
+  {
+    "question": "What is the capital of France?",
     "correct": "Paris",
-    "incorrect": ["Quito","Pristina","Pyongyang"]
-   },
-   {
-    "question": "What is the capital of Nigeria",
+    "incorrect": ["Marseille", "Lyon", "Toulouse"]
+  },
+  {
+    "question": "What is the capital of Nigeria?",
     "correct": "Abuja",
-    "incorrect": ["Baatar","Rome","Ankara"]
-   },
-   {
-    "question": "What is the capital of China",
+    "incorrect": ["Lagos", "Kano", "Ibadan"]
+  },
+  {
+    "question": "What is the capital of China?",
     "correct": "Beijing",
-    "incorrect": ["Brastilava","Reykjavik","Ulaan"]
-   },
-   {
-    "question": "What is the capital of Ireland",
+    "incorrect": ["Shanghai", "Guangzhou", "Shenzhen"]
+  },
+  {
+    "question": "What is the capital of Ireland?",
     "correct": "Dublin",
-    "incorrect": ["Kabul","Africa","Paris"]
-   },
-   {
-    "question": "What is the capital of Netherland",
+    "incorrect": ["Cork", "Galway", "Limerick"]
+  },
+  {
+    "question": "What is the capital of the Netherlands?",
     "correct": "Amsterdam",
-    "incorrect": ["ottawa","Pyongyang","Ankara"]
-   }
-
+    "incorrect": ["Rotterdam", "Utrecht", "The Hague"]
+  }
 ]

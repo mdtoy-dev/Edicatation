@@ -1,0 +1,52 @@
+[
+  {
+    "question": "How many fingers does one hand have?",
+    "correct": "5",
+    "incorrect": ["4", "6", "8"]
+  },
+  {
+    "question": "If you have 3 apples and eat 1, how many apples do you have left?",
+    "correct": "2",
+    "incorrect": ["1", "3", "4"]
+  },
+  {
+    "question": "What comes after the number 4?",
+    "correct": "5",
+    "incorrect": ["3", "6", "7"]
+  },
+  {
+    "question": "If you have 2 teddy bears and get 1 more, how many teddy bears do you have?",
+    "correct": "3",
+    "incorrect": ["1", "2", "4"]
+  },
+  {
+    "question": "How many legs does a cat have?",
+    "correct": "4",
+    "incorrect": ["2", "6", "8"]
+  },
+  {
+    "question": "What is the shape of a pizza?",
+    "correct": "Circle",
+    "incorrect": ["Square", "Triangle", "Rectangle"]
+  },
+  {
+    "question": "If you have 7 candies and give 2 to a friend, how many candies do you have left?",
+    "correct": "5",
+    "incorrect": ["3", "6", "8"]
+  },
+  {
+    "question": "What is the color of a banana?",
+    "correct": "Yellow",
+    "incorrect": ["Red", "Green", "Blue"]
+  },
+  {
+    "question": "What is 2 + 3?",
+    "correct": "5",
+    "incorrect": ["4", "6", "7"]
+  },
+  {
+    "question": "How many sides does a square have?",
+    "correct": "4",
+    "incorrect": ["3", "5", "6"]
+  }
+]
