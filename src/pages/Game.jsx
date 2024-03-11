@@ -1,100 +1,91 @@
-
-import {useState,useEffect} from 'react';
-import  questions from '../data/CountryCapitals.json';
-import Score from './Score'
-
+import { useState, useEffect } from "react";
+import questions from "../data/CountryCapitals.json";
+import Score from "./Score";
 
 /*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
-    const answer = [question.correct, ...question.incorrect];
+  const answer = [question.correct, ...question.incorrect];
 
-    for (let i=0; i< answer.length;i++){
-        const j= Math.floor(Math.random()*i);
-        const k= answer[i];
-        answer[i]=answer[j];
-        answer[j]=k;
+  for (let i = 0; i < answer.length; i++) {
+    const j = Math.floor(Math.random() * i);
+    const k = answer[i];
+    answer[i] = answer[j];
+    answer[j] = k;
+  }
+
+  return answer;
+};
+
+function Game() {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
+  const [answers, setAnswer] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [scoreCount, setScoreCount] = useState(0);
+  const [isEnd, setIsEnd] = useState(false);
+
+  /*sets currentquestion and Answer everytime, based on questionIndex changes */
+  useEffect(() => {
+    const question = questions[currentQuestionIndex];
+    setCurrentQuestion(question);
+    setAnswer(shuffleAnswer(question));
+  }, [currentQuestionIndex]);
+
+  /* Function to  displaynextquestion,calculate score based on the answer and End the quiz*/
+  const chooseAnswer = (answer) => {
+    setSelectedAnswer(answer);
+
+    if (answer === currentQuestion.correct) {
+      setScoreCount(scoreCount + 1);
     }
 
-    return answer;
-}
+    setTimeout(() => {
+      const newIndex = currentQuestionIndex + 1;
 
+      if (newIndex === questions.length) {
+        setIsEnd(true);
+        console.log("puzzle finished");
+        console.log("score" + scoreCount);
+      } else {
+        setCurrentQuestionIndex(newIndex);
+        setSelectedAnswer(null);
+      }
+    }, 100);
+  };
 
+  if (isEnd === true) {
+    return <Score scoreCount={scoreCount} />;
+  }
 
-function Game(){
-
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-    const[currentQuestion, setCurrentQuestion] = useState(questions[0]);
-    const[answers,setAnswer]=useState([]);
-    const[selectedAnswer, setSelectedAnswer]= useState(null);
-    const[scoreCount, setScoreCount]= useState(0);
-    const[isEnd, setIsEnd]=useState(false);
-
-/*sets currentquestion and Answer everytime, based on questionIndex changes */
-    useEffect(()=>{
-        const question = questions[currentQuestionIndex];
-        setCurrentQuestion(question);
-        setAnswer(shuffleAnswer(question));
-    },[currentQuestionIndex]);
-
-    /* Function to  displaynextquestion,calculate score based on the answer and End the quiz*/
-    const chooseAnswer= (answer) => {
-      
-        setSelectedAnswer(answer);
-
-        if(answer === currentQuestion.correct){
-            setScoreCount(scoreCount + 1);
-        }
-
-        setTimeout(() => {
-          
-            const newIndex = currentQuestionIndex + 1
-
-            if(newIndex === questions.length){
-
-              setIsEnd(true);
-                console.log("puzzle finished");
-                console.log("score"+scoreCount);
-            }else{
-                setCurrentQuestionIndex(newIndex);
-                setSelectedAnswer(null);
-            }
-              
-        }, 900);
-
-    }
-
-    if(isEnd=== true){
-
-        return <Score scoreCount={scoreCount}/>
-
-    }
-
-
-return (<>
-   <div className="flex items-center justify-center h-screen">
-         <section className="max-w-lg bg-white shadow-md rounded-md p-6">
-            <div className="font-bold text-lg mb-2">               
-                Questions: {currentQuestionIndex+1}/{questions.length}
-            </div>
-            <div className="mb-4 ">
-                <h4 className="text-xl font-bold mb-2">{currentQuestion.question}</h4>
-                <ul>
-                {answers.map((answer, index) => (
-                            <li className="mb-2 flex justify-center" key={index} >
-                            <button className="bg-cyan-600 hover:bg-green-400  text-white  font-bold py-2 px-4 rounded"
-                            onClick={()=>chooseAnswer(answer)}
-                            >{answer}</button></li>
-                        ))}
-                </ul>
-
-            </div>
-
-         </section>
-         </div>
-
-       </>)
-
+  return (
+    <>
+      <div className="flex items-center justify-center h-screen">
+        <section className="max-w-lg bg-white shadow-md rounded-md p-6">
+          <div className="font-bold text-lg mb-2">
+            Questions: {currentQuestionIndex + 1}/{questions.length} | Score:{" "}
+            {scoreCount}
+          </div>
+          <div className="mb-4 ">
+            <h4 className="text-xl font-bold mb-2">
+              {currentQuestion.question}
+            </h4>
+            <ul>
+              {answers.map((answer, index) => (
+                <li className="mb-2 flex justify-center" key={index}>
+                  <button
+                    className="bg-cyan-600 hover:bg-green-400  text-white  font-bold py-2 px-4 rounded"
+                    onClick={() => chooseAnswer(answer)}
+                  >
+                    {answer}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </div>
+    </>
+  );
 }
 
 export default Game;
-
