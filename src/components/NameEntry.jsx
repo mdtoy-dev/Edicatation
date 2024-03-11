@@ -17,12 +17,12 @@ function NameEntry() {
       {showInput ? (
         <input
           type="text"
-          placeholder="Your Name"
+          placeholder="Enter your name"
           onKeyDown={handleKeyDown}
-          className="w-28 text-center text-xl font-bold boder-2 rounded-md bg-red-100"
+          className="w-80 h-12 text-center text-teal-700 text-xl border border-2 border-orange-600 font-bold rounded-sm bg-orange-300 placeholder-teal-700 shadow-2xl focus:outline-none focus:border-teal-600"
         />
       ) : (
-        <p className="text-2xl font-bold text-blue-500 underline hover:text-3xl">Hello {name}</p>
+        <p className="text-4xl mb-4 font-bold text-teal-700 hover:text-teal-800">Hello {name}!</p>
       )}
     </div>
   )
