@@ -14,7 +14,13 @@ const Home = () => {
       >
         Start Learning
       </Link>
-      <div className="space-x-2 mt-4">
+      <div
+        className="grid grid-cols-2 space-x-2 space-y-2 mt-2 mx-5 place-items-baseline
+      "
+      >
+        <Link to="/memory">
+          <HomeSubjectButton>Memory</HomeSubjectButton>
+        </Link>
         <Link to="/math">
           <HomeSubjectButton>Math</HomeSubjectButton>
         </Link>

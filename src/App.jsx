@@ -4,6 +4,7 @@ import Game from "./pages/Game"
 import Score from "./pages/Score"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import Cards from "./components/Cards"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/game" element={<Game />} />
           <Route path="/score" element={<Score />} />
+          <Route path="/memory" element={<Cards />} />
         </Routes>
         <Footer />
       </div>

@@ -1,14 +1,12 @@
-import React from "react";
+import React from "react"
 
-import Game from "./Game";
 
-function Score({scoreCount}){
-
-return(<><div>
-          Your Score: {scoreCount}
-        </div>
-        </>)
-
+function Score({ scoreCount }) {
+  return (
+    <>
+      <div>Your Score: {scoreCount}</div>
+    </>
+  )
 }
 
-export default Score;
+export default Score
