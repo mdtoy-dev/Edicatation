@@ -3,6 +3,7 @@ import logo from "../assets/logo.png"
 import HomeSubjectButton from "../components/HomeSubjectButton"
 import NameEntry from "../components/NameEntry"
 
+
 const Home = () => {
   return (
     <div className="flex flex-col justify-center items-center">
