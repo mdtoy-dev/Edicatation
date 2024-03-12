@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom"
 
 const navigation = [
   { name: 'Home', href: '/', current: true },
-  { name: 'Game', href: '/game', current: false },
+  { name: 'Games', href: '/gamecategory', current: false },
   { name: 'Scores', href: '/score', current: false },
 ]
 
@@ -48,7 +48,7 @@ function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-cyan-500 text-white' : 'bg-cyan-600 hover:bg-cyan-500 hover:text-white',
+                          item.current ? 'bg-cyan-500 text-white' : 'bg-cyan-600 hover:bg-cyan-500 text-cyan-950 hover:text-white',
                           'rounded-md px-3 py-2 w-36 text-center text-lg font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}

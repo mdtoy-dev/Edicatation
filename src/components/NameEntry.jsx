@@ -19,7 +19,7 @@ function NameEntry() {
           type="text"
           placeholder="Enter your name"
           onKeyDown={handleKeyDown}
-          className="w-80 h-12 text-center text-teal-700 text-xl border border-2 border-orange-600 font-bold rounded-sm bg-orange-300 placeholder-teal-700 shadow-2xl focus:outline-none focus:border-teal-600"
+          className="w-max h-12 text-center text-teal-700 text-xl border border-2 border-orange-600 shadow-orange-900 font-bold rounded-sm bg-orange-300 placeholder-teal-700 shadow-2xl focus:outline-none focus:border-teal-600"
         />
       ) : (
         <p className="text-4xl mb-4 font-bold text-teal-700 hover:text-teal-800">Hello {name}!</p>
