@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import questions from "../data/CountryCapitals.json";
 import Score from "./Score";
+import ProgressBar from "../components/progressBar";
 
 /*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
@@ -59,9 +60,10 @@ function Game() {
 
   return (
     <>
-      <div className="flex items-center justify-center h-screen">
+    <div>
+      <div className="flex flex-row items-center justify-center h-screen">
         <section className="max-w-lg bg-white shadow-md rounded-md p-6">
-          <div className="font-bold text-lg mb-2">
+          <div className="text-center font-bold text-lg mb-2">
             Questions: {currentQuestionIndex + 1}/{questions.length} | Score:{" "}
             {scoreCount}
           </div>
@@ -69,11 +71,11 @@ function Game() {
             <h4 className="text-xl font-bold mb-2">
               {currentQuestion.question}
             </h4>
-            <ul>
+            <ul className="mt-6">
               {answers.map((answer, index) => (
-                <li className="mb-2 flex justify-center" key={index}>
+                <li className="mb-2 flex ms-4" key={index}>
                   <button
-                    className="bg-cyan-600 hover:bg-green-400  text-white  font-bold py-2 px-4 rounded"
+                    className="bg-cyan-600 hover:bg-orange-400 text-white  font-bold py-2 px-4 rounded"
                     onClick={() => chooseAnswer(answer)}
                   >
                     {answer}
@@ -83,7 +85,10 @@ function Game() {
             </ul>
           </div>
         </section>
-      </div>
+     </div>
+     <ProgressBar scoreCount={scoreCount} />
+    </div>
+ 
     </>
   );
 }
