@@ -59,37 +59,31 @@ function Game() {
   }
 
   return (
-    <>
-    <div>
-      <div className="flex flex-col items-center justify-center h-screen">
-        <section className="max-w-lg bg-white shadow-md rounded-md p-6">
-          <div className="text-center font-bold text-lg mb-2">
-            Questions: {currentQuestionIndex + 1}/{questions.length} | Score:{" "}
-            {scoreCount}
-          </div>
-          <div className="mb-4 ">
-            <h4 className="text-xl font-bold mb-2">
-              {currentQuestion.question}
-            </h4>
-            <ul className="mt-6">
-              {answers.map((answer, index) => (
-                <li className="mb-2 flex ms-4" key={index}>
-                  <button
-                    className="bg-cyan-600 hover:bg-orange-400 text-white  font-bold py-2 px-4 rounded"
-                    onClick={() => chooseAnswer(answer)}
-                  >
-                    {answer}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-     </div>
-     <ProgressBar scoreCount={scoreCount} />
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+      <div className="w-full max-w-2xl bg-white shadow-md rounded-md p-6">
+        <div className="text-center font-bold text-lg mb-2">
+          Questions: {currentQuestionIndex + 1}/{questions.length}
+        </div>
+        <div className="mb-4">
+          <h4 className="text-2xl text-cyan-600 font-bold text-center mb-2">
+            {currentQuestion.question}
+          </h4>
+          <ul className="mt-6">
+            {answers.map((answer, index) => (
+              <li className="mb-2 flex ms-4" key={index}>
+                <button
+                  className="w-40 h-12 bg-cyan-600 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded"
+                  onClick={() => chooseAnswer(answer)}
+                >
+                  {answer}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <ProgressBar scoreCount={scoreCount} />
+      </div>
     </div>
- 
-    </>
   );
 }
 
