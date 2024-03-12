@@ -5,6 +5,7 @@ import Score from "./pages/Score"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Cards from "./components/Cards"
+import FlagGame from "./components/FlagGame"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/game" element={<Game />} />
           <Route path="/score" element={<Score />} />
           <Route path="/memory" element={<Cards />} />
+          <Route path="/countries" element={<FlagGame />} />
         </Routes>
         <Footer />
       </div>
