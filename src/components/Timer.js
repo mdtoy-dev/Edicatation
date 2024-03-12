@@ -19,9 +19,18 @@ const Timer = ({timeLimit, onTimeout}) => {
 		return () => clearInterval(interval)
 	}, [isActive, seconds, onTimeout])
 
-	const formattedTime = `${Math.floor(second / 60)
+	const formattedTime = `${Math.floor(seconds / 60)
 		.toString()
-		.padStart(2, '0')}:${(second % 60).toString().padStart(2, '0')}`
+		.padStart(2, '0')}:${(seconds % 60).toString().padStart(2, '0')}`
+
+	return (
+		<div>
+			<p> Time remaining: {formattedTime}</p>
+			<button onClick={() => setIsActive(!isActive)}>
+				{isActive ? 'Pause' : 'Start'}
+			</button>
+		</div>
+	)
 }
 
 export default Timer
