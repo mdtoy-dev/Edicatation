@@ -61,7 +61,7 @@ function Game() {
   return (
     <>
     <div>
-      <div className="flex flex-col items-center justify-center h-screen">
+      <div className="flex flex-row items-center justify-center h-screen">
         <section className="max-w-lg bg-white shadow-md rounded-md p-6">
           <div className="text-center font-bold text-lg mb-2">
             Questions: {currentQuestionIndex + 1}/{questions.length} | Score:{" "}
