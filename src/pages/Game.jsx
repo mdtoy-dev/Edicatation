@@ -25,6 +25,8 @@ function Game() {
   const [scoreCount, setScoreCount] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
 
+ 
+
   /*sets currentquestion and Answer everytime, based on questionIndex changes */
   useEffect(() => {
     const question = questions[currentQuestionIndex];
@@ -37,7 +39,10 @@ function Game() {
     setSelectedAnswer(answer);
 
     if (answer === currentQuestion.correct) {
+
       setScoreCount(scoreCount + 1);
+
+      localStorage.setItem("score", scoreCount+1);
     }
 
     setTimeout(() => {
@@ -55,8 +60,12 @@ function Game() {
   };
 
   if (isEnd === true) {
-    return <Score scoreCount={scoreCount} />;
+ 
+    return <Score scoreCount={scoreCount} />
+            
   }
+  
+  
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-md p-6">
