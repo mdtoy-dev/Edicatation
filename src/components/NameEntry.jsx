@@ -12,17 +12,12 @@ function NameEntry() {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      setName(event.target.value)
+      
       setShowInput(false)
-         
+      localStorage.setItem("name", event.target.value);
+      setName(event.target.value);
     }
   }
-
-  console.log(name);
-  // Save the name value to localStorage
-  localStorage.setItem("name", name);
-
-
 
   return (
     <div>
