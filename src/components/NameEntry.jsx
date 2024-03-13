@@ -4,18 +4,26 @@ import { useState, useEffect } from "react"
 
 
 function NameEntry() {
-  const [name, setName] = useState("")
-  const [showInput, setShowInput] = useState(true)
+  const [name, setName] = useState("");
+  const [showInput, setShowInput] = useState(true);
+  const [errorMessage, setErrorMessage] = useState("Enter your name");
 
 
   
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      
+      setName(event.target.value);
+      if (event.target.value !== "") {
+        setName(event.target.value);
       setShowInput(false)
       localStorage.setItem("name", event.target.value);
       setName(event.target.value);
+    } else {
+      setErrorMessage("Please add your name to continue");
+
+    }
+      
     }
   }
 
@@ -24,7 +32,7 @@ function NameEntry() {
       {showInput ? (
         <input
           type="text"
-          placeholder="Enter your name"
+          placeholder={errorMessage}
           onKeyDown={handleKeyDown}
           className="w-max h-12 text-center text-teal-700 text-xl border border-2 border-orange-600 shadow-orange-900 font-bold rounded-sm bg-orange-300 placeholder-teal-700 shadow-2xl focus:outline-none focus:border-teal-600"
         />
