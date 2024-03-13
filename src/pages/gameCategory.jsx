@@ -15,6 +15,9 @@ function GameCategory (){
         }, {
             name: "Animals", 
             link: "/animal",
+        }, {
+            name: "Capitals", 
+            link: "/capitals",
         }
 ]; 
 
