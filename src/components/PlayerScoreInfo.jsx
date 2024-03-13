@@ -1,34 +1,19 @@
 import {useState,useEffect} from "react";
 
+function PlayerScoreInfo() {
 
+    
+    var storedName = localStorage.getItem('name');
+    var storedScore = parseInt(localStorage.getItem('score'));
 
-
-
-function PlayerScoreInfo({lName,score}) {
-
-
-    let finalInfo={name:lName,
-                     score:score};
-
-    console.log(finalInfo);
-
-    useEffect(() => {
-     
-        localStorage.setItem("finalInfo", JSON.stringify(finalInfo));
-       
-    }, []);
-
-    useEffect(() => {
-        
-        localStorage.setItem("finalInfo", JSON.stringify(finalInfo));
-    }, [finalInfo]);
-
-   const retrievedObject = JSON.parse(localStorage.getItem('finalInfo'));
+    console.log(storedName);
+    console.log(storedScore);
 
     return (
         <>
             <h4>Score Details</h4>
-            <p>{finalInfo.name}: {finalInfo.score}</p>
+
+            
         </>
     );
 }

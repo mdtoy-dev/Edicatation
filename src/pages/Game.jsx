@@ -18,7 +18,7 @@ const shuffleAnswer = (question) => {
   return answer;
 };
 
-function Game({name}) {
+function Game() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
   const [answers, setAnswer] = useState([]);
@@ -57,12 +57,13 @@ function Game({name}) {
 
   if (isEnd === true) {
 
-    let lName= name;
-
-
-    return <><Score scoreCount={scoreCount} />
-             <PlayerScoreInfo  finalInfo={{lName,score:scoreCount}} /></>;
+  
+    return <Score scoreCount={scoreCount} />
+             
   }
+
+  // Save the score value to localStorage
+  localStorage.setItem("score", scoreCount);
 
   return (
     <>

@@ -7,12 +7,11 @@ function Score({ scoreCount }) {
       <div className="bg-gray-100 p-8 rounded-md shadow-md">
         <div className="text-4xl font-bold mb-4">
           Congratulations, you scored
-          <PlayerScoreInfo/>
-                    
-        </div>
+       <PlayerScoreInfo/>              
+      </div>
         <div className="text-6xl text-center font-extrabold text-blue-500">
           {scoreCount} Points
-        </div>
+      </div>
       </div>
     </div>
   );

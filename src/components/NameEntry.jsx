@@ -1,25 +1,28 @@
 import React from "react"
-import { useState } from "react"
-import Game from "../pages/Game"
+import { useState, useEffect } from "react"
+
 
 
 function NameEntry() {
   const [name, setName] = useState("")
   const [showInput, setShowInput] = useState(true)
 
+
+  
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       setName(event.target.value)
       setShowInput(false)
-    
+         
     }
   }
 
-if(!name){
-  
-  return <Game name={name}/>
+  console.log(name);
+  // Save the name value to localStorage
+  localStorage.setItem("name", name);
 
-}
+
 
   return (
     <div>
