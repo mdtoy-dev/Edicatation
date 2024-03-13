@@ -7,6 +7,7 @@ import Cards from "./components/Cards"
 import FlagGame from "./components/FlagGame"
 import Explore from "./pages/Explore"
 import Capitals from "./components/countryCapitals"
+import MathGame from "./components/MathGame"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/memory" element={<Cards />} />
           <Route path="/countries" element={<FlagGame />} />
           <Route path="/capitals" element={<Capitals />} />
+          <Route path="/math" element={<MathGame />} />
         </Routes>
         <Footer />
       </div>

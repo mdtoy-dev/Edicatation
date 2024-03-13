@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import logo from "../assets/logo.png"
 import NameEntry from "../components/NameEntry"
+import MathGame from "../components/MathGame"
 
 const Home = () => {
   return (
