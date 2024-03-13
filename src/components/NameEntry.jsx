@@ -1,5 +1,7 @@
 import React from "react"
 import { useState } from "react"
+import Game from "../pages/Game"
+
 
 function NameEntry() {
   const [name, setName] = useState("")
@@ -9,8 +11,15 @@ function NameEntry() {
     if (event.key === "Enter") {
       setName(event.target.value)
       setShowInput(false)
+    
     }
   }
+
+if(!name){
+  
+  return <Game name={name}/>
+
+}
 
   return (
     <div>
@@ -24,6 +33,7 @@ function NameEntry() {
       ) : (
         <p className="text-4xl mb-4 font-bold text-teal-700 hover:text-teal-800">Hello {name}!</p>
       )}
+
     </div>
   )
 }

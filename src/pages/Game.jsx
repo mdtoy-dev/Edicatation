@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import questions from "../data/CountryCapitals.json";
 import Score from "./Score";
 import ProgressBar from "../components/progressBar";
+import PlayerScoreInfo from "../components/PlayerScoreInfo";
 
 /*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
@@ -17,7 +18,7 @@ const shuffleAnswer = (question) => {
   return answer;
 };
 
-function Game() {
+function Game({name}) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
   const [answers, setAnswer] = useState([]);
@@ -55,7 +56,12 @@ function Game() {
   };
 
   if (isEnd === true) {
-    return <Score scoreCount={scoreCount} />;
+
+    let lName= name;
+
+
+    return <><Score scoreCount={scoreCount} />
+             <PlayerScoreInfo  finalInfo={{lName,score:scoreCount}} /></>;
   }
 
   return (
