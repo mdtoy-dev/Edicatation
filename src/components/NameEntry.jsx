@@ -1,14 +1,21 @@
 import React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
+
 
 function NameEntry() {
   const [name, setName] = useState("")
   const [showInput, setShowInput] = useState(true)
 
+
+  
+
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
-      setName(event.target.value)
+      
       setShowInput(false)
+      localStorage.setItem("name", event.target.value);
+      setName(event.target.value);
     }
   }
 
@@ -24,6 +31,7 @@ function NameEntry() {
       ) : (
         <p className="text-4xl mb-4 font-bold text-teal-700 hover:text-teal-800">Hello {name}!</p>
       )}
+
     </div>
   )
 }
