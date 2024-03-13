@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import Cards from "./components/Cards"
 import FlagGame from "./components/FlagGame"
-import GameCategory from "./pages/gameCategory"
+import Explore from "./pages/Explore"
 import Capitals from "./components/countryCapitals"
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/gamecategory" element={<GameCategory />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/score" element={<Score />} />
           <Route path="/memory" element={<Cards />} />
           <Route path="/countries" element={<FlagGame />} />
