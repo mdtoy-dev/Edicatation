@@ -3,7 +3,6 @@ import ReactPlayer from "react-player";
 import { useParams } from "react-router";
 
 
-
 function VideoPlayer() {
 
 const playerRef = useRef(null);   
@@ -11,8 +10,7 @@ const playerRef = useRef(null);
 let { type } = useParams();
 const [urlType, setUrlType]=useState("");
 
-console.log(type);
-
+//Mapping of types to URLs
 const urlMapping ={ 
 
     animalSounds: "https://www.youtube.com/watch?v=YCvzPBUPZ9w",
@@ -20,6 +18,7 @@ const urlMapping ={
     rhymes: "https://www.youtube.com/watch?v=buE6l32rCHo"
 }
 
+// Function to set the URL based on the type
 const setUrlBasedOnType=() => {
 
 if(urlMapping.hasOwnProperty(type)){
@@ -30,7 +29,8 @@ if(urlMapping.hasOwnProperty(type)){
 }
 
 }
-                 
+
+// Call setUrlBasedOnType whenever the type changes
 useEffect(()=> {
         setUrlBasedOnType();
         },[type])
