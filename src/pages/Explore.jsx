@@ -29,7 +29,7 @@ function Explore (){
     const videos = [
     {
         name: "AnimalSounds",
-        link: "/videos/animal"
+        link: "/videos/animalSounds"
     },
     {
         name: "Learn Colours",
