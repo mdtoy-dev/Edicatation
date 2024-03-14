@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"  # Specify your build command if applicable
+  functions = "functions"    # Specify the directory where your serverless functions are located
+  publish = "dist"           # Specify the directory with the built site if applicable
+
+[[redirects]]
+  force = true
+  from = "/api/*"
+  status = 200
+  to = "/.netlify/functions/api/:splat"
+
+[functions]
+  external_node_modules = ["express"]
+  node_bundler = "esbuild"

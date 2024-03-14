@@ -14,7 +14,7 @@ function Card({ color, id, stat, handleClick }) {
         backgroundColor:
           stat === "active" || stat === "correct" ? color : "black",
       }}
-      onClick={() => stat !== "correct" && stat !== "wrong" && handleClick(id)}
+      onClick={() => stat !== "correct" && handleClick(id)}
     ></div>
   )
 }
