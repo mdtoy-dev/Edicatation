@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 
 function Explore (){
     
@@ -8,25 +9,38 @@ function Explore (){
         name: "Memory", 
         link: "/memory" 
     }, { 
-        name: "Capitals", 
-        link: "/capitals",
+        name: "Countries", 
+        link: "/countries",
     }
 ]
     
     const quizes = [
     {
         name: "Math",
-        link: "/math",
+        link: "/quiz/Math",
     }, {
-        name: "Countries",
-        link: "/countries",
+        name: "Capitals",
+        link: "/quiz/CountryCapitals",
     }, {
         name: "Animals", 
-        link: "/animal",
+        link: "/quiz/Animals",
     }, 
 ]
-    const videos = []
+    const videos = [
+    {
+        name: "AnimalSounds",
+        link: "/videos/animalSounds"
+    },
+    {
+        name: "Learn Colours",
+        link:"/videos/colours",
+    },
+    {
+        name:'Nursery Rhymes',
+        link:"/videos/rhymes"
+    }
 
+]
 
 
 
@@ -58,6 +72,7 @@ return (
                 className={"h-36 flex m-6 bg-orange-50 transition ease-in-out delay-150 border border-4 border-orange-50  rounded-lg shadow-md shadow-orange-300 , hover:bg-orange-100 hover:border-orange-300 hover:-translate-y-1 hover:scale-110 duration-300 "}
             >
                 <h5 className="text-2xl m-auto font-semibold text-cyan-600 subpixel-antialiased">{quiz.name}</h5>
+          
             </Link>
              ))}
              </div>
