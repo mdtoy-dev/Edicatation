@@ -12,7 +12,6 @@ import Quizquestion from "./components/quizQuestionGenerator"
 import Videos from "./components/VideoPlayer"
 
 
-
 function App() {
   return (
     <Router>
@@ -26,6 +25,7 @@ function App() {
           <Route path="/countries" element={<FlagGame />} />
           <Route path="/quiz/:type" element={<Quizquestion />} />
           <Route path="/videos/:type" element={<Videos />}/>
+
         </Routes>
         <Footer />
       </div>
