@@ -1,51 +1,24 @@
-import React, { useState, useEffect } from "react";
-import StarIcon from "@heroicons/react/16/solid/StarIcon";
+import React, {useState, useEffect} from 'react'
+import PropTypes from 'prop-types'
 
-function ProgressBar({ scoreCount }) {
-  // setting the progress bar percentage to scoreCount
-  const progressPercentage = (scoreCount / 10) * 100;
+const ProgressBar = ({scoreCount}) => {
+	// Calculate progress percentage based on scoreCount
+	const progressPercentage = scoreCount > 0 ? (scoreCount / 10) * 100 : 0
 
-  //useState and useEffect hooks to change the colour and size of the star
-  const [starClass, setStarClass] = useState(() => getStarClass(scoreCount));
+	// Define classes for different progress states
+	const classes = [
+		'text-amber-200',
+		'text-amber-300',
+		'text-amber-400',
+		'text-amber-500',
+		'text-amber-50',
+	]
 
-  //condition deciding the class properties of the star
-  function getStarClass(scoreCount) {
-    if (scoreCount === 1 || scoreCount === 2 || scoreCount === 3) {
-      return "h-16 w-16 fill-current text-amber-200";
-    } else if (scoreCount === 4 || scoreCount === 5 || scoreCount === 6) {
-      return " h-16 w-16 fill-current text-amber-300";
-    } else if (scoreCount === 7 || scoreCount === 8 || scoreCount === 9) {
-      return "h-16 w-16 fill-current text-amber-400";
-    } else if (scoreCount === 10) {
-      return "h-16 w-16 fill-current text-amber-500";
-    } else {
-      return "h-16 w-16 fill-current text-amber-50";
-    }
-  }
+	
 
-  useEffect(() => {
-    setStarClass(getStarClass(scoreCount));
-  }, [scoreCount]);
-
-  return (
-    <div>
-      <div className="w-9/12 m-auto">
-        <StarIcon
-          className={starClass}
-          style={{ marginLeft: `${progressPercentage}%` }}
-        />
-      </div>
-      <div className="mt-0 self-start justify-self-center place-self-center m-auto w-9/12 bg-gray-200 rounded-full h-10 dark:bg-gray-700">
-        <div
-          className="progress bg-green-400 rounded-full h-full"
-          style={{ width: `${progressPercentage}%` }}
-        />
-        <div className="ml-4 text-sm text-right font-semibold text-gray-600 dark:text-gray-400">
-          {`${scoreCount}/10`}
-        </div>
-      </div>
-    </div>
-  );
+// Define propTypes for the ProgressBar component
+ProgressBar.propTypes = {
+	scoreCount: PropTypes.number.isRequired, // Define scoreCount as a required number prop
 }
 
-export default ProgressBar;
+export default ProgressBar
