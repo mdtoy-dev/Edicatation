@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import questions from "../data/CountryCapitals.json";
-import Score from "./Score";
-import ProgressBar from "../components/progressBar";
+import Score from "../pages/Score";
+import ProgressBar from "./progressBar";
 
 /*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
@@ -17,7 +17,7 @@ const shuffleAnswer = (question) => {
   return answer;
 };
 
-function Game() {
+function Capitals() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
   const [answers, setAnswer] = useState([]);
@@ -95,4 +95,4 @@ function Game() {
   );
 }
 
-export default Game;
+export default Capitals;
