@@ -25,7 +25,7 @@ function App() {
           <Route path="/memory" element={<Cards />} />
           <Route path="/countries" element={<FlagGame />} />
           <Route path="/quiz/:type" element={<Quizquestion />} />
-          <Route path="/videos" element={<Videos />}/>
+          <Route path="/videos/:type" element={<Videos />}/>
         </Routes>
         <Footer />
       </div>

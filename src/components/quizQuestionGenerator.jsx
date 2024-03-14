@@ -36,10 +36,7 @@ function quizQuestionGenerator() {
 
   /*sets currentquestion and Answer everytime, based on questionIndex changes */
   useEffect(() => {
-   /* const question = questions[currentQuestionIndex];
-    setCurrentQuestion(question);
-    setAnswer(shuffleAnswer(question));*/
-    (async () => {
+       (async () => {
         const value = (await import(`../data/${type}.json`));
         console.log(value.default);
         const question = value.default[currentQuestionIndex];

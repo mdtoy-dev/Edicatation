@@ -29,15 +29,15 @@ function Explore (){
     const videos = [
     {
         name: "AnimalSounds",
-        link: "/videos"
+        link: "/videos/animal"
     },
     {
         name: "Learn Colours",
-        link:'/colours',
+        link:"/videos/colours",
     },
     {
         name:'Nursery Rhymes',
-        link:"/rhymes"
+        link:"/videos/rhymes"
     }
 
 ]
