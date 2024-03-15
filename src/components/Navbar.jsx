@@ -84,8 +84,8 @@ function Navbar() {
               {navigation.map((item) => item.visible &&  (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as={Link}
+                  to={item.href}
                   className={classNames(
                     item.current ? 'bg-cyan-800 text-cyan-50' : 'text-cyan-300 hover:bg-cyan-700 hover:text-cyan-50',
                     'block rounded-md px-3 py-2 text-base font-medium'
