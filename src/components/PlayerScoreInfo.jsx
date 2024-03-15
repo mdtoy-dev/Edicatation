@@ -4,7 +4,7 @@ function PlayerScoreInfo() {
 
     //Reading the data from Local Storage.
     var storedName = localStorage.getItem('name');
-    var storedScore = parseInt(localStorage.getItem('score'));
+    var storedScore = parseInt(localStorage.getItem('quizScore'));
 
     
     return (
