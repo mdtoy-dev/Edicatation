@@ -1,32 +1,47 @@
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {useState, useEffect } from 'react'
 import { useLocation } from "react-router-dom"
 import { Link } from 'react-router-dom'
+import NameEntry from './NameEntry'
 
-const navigation = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Game', href: '/game', current: false },
-  { name: 'Scores', href: '/score', current: false },
-]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 function Navbar() {
+
+  const [buttonAppear, setButtonAppear] = useState(true)
   const location = useLocation()
   
-   navigation.forEach((item) => {
-     item.current = item.href === location.pathname
-   })
+  useEffect(() => {
+    const playerName = localStorage.getItem('name');
+    if (playerName) {
+      setButtonAppear(true)
+    } else {
+      setButtonAppear(false)
+    }
+  }, [NameEntry]);
 
-
+  
+  
+  const navigation = [
+    { name: 'Home', href: '/', current: true, visible: true },
+    { name: 'Explore', href: '/explore', current: false, visible: buttonAppear },
+    { name: 'Scores', href: '/score', current: false, visible: buttonAppear },
+  ]
+  
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+  
+  navigation.forEach((item) => {
+    item.current = item.href === location.pathname
+  })
+  
   return (
-    <Disclosure as="nav" className="bg-cyan-600">
+    <Disclosure as="nav" id="navigation" className="bg-cyan-600 shadow-lg shadow-cyan-700">
       {({ open }) => (
         <>
           <div className="mx-2 max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
+            <div className="relative flex h-20 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 bg-cyan-500 hover:bg-cyan-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -44,12 +59,12 @@ function Navbar() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation.map((item) => item.visible && (
                       <Link
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.current ? 'bg-cyan-500 text-white' : 'bg-cyan-600 hover:bg-cyan-500 hover:text-white',
+                          item.current ? 'bg-cyan-500 text-cyan-50' : 'bg-cyan-600 text-cyan-50 hover:bg-cyan-500',
                           'rounded-md px-3 py-2 w-36 text-center text-lg font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -66,13 +81,13 @@ function Navbar() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {navigation.map((item) => item.visible &&  (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  as={Link}
+                  to={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'bg-cyan-800 text-cyan-50' : 'text-cyan-300 hover:bg-cyan-700 hover:text-cyan-50',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
@@ -86,6 +101,7 @@ function Navbar() {
       )}
     </Disclosure>
   )
+
 }
 
 export default Navbar;
