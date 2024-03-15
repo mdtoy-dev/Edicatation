@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+
 import questions from "../data/CountryCapitals.json";
 import Score from "../pages/Score";
 import ProgressBar from "./progressBar";
+import { useParams } from "react-router-dom";
+
 
 /*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
-  const answer = [question.correct, ...question.incorrect];
+const answer = [question.correct, ...question.incorrect];
 
   for (let i = 0; i < answer.length; i++) {
     const j = Math.floor(Math.random() * i);
@@ -17,22 +20,33 @@ const shuffleAnswer = (question) => {
   return answer;
 };
 
-function Capitals() {
+function quizQuestionGenerator() {
+
+
+ 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(questions[0]);
   const [answers, setAnswer] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [scoreCount, setScoreCount] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
-
+  
+  let { type } = useParams();
+  const [currentQuestion, setCurrentQuestion] = useState({});
  
 
   /*sets currentquestion and Answer everytime, based on questionIndex changes */
   useEffect(() => {
-    const question = questions[currentQuestionIndex];
-    setCurrentQuestion(question);
-    setAnswer(shuffleAnswer(question));
+       (async () => {
+        const value = (await import(`../data/${type}.json`));
+        console.log(value.default);
+        const question = value.default[currentQuestionIndex];
+        setCurrentQuestion(question);
+        setAnswer(shuffleAnswer(question));
+
+    })();
+    
   }, [currentQuestionIndex]);
+    
 
   /* Function to  displaynextquestion,calculate score based on the answer and End the quiz*/
   const chooseAnswer = (answer) => {
@@ -42,7 +56,7 @@ function Capitals() {
 
       setScoreCount(scoreCount + 1);
 
-      localStorage.setItem("score", scoreCount+1);
+      localStorage.setItem("quizScore", scoreCount+1);
     }
 
     setTimeout(() => {
@@ -95,4 +109,4 @@ function Capitals() {
   );
 }
 
-export default Capitals;
+export default quizQuestionGenerator;

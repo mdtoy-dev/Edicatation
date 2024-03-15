@@ -11,15 +11,15 @@ function ProgressBar({ scoreCount }) {
   //condition deciding the class properties of the star
   function getStarClass(scoreCount) {
     if (scoreCount === 1 || scoreCount === 2 || scoreCount === 3) {
-      return "h-16 w-16 fill-current text-amber-200";
+      return "h-16 w-16 fill-current text-amber-200 transition-all ease-out duration-1000";
     } else if (scoreCount === 4 || scoreCount === 5 || scoreCount === 6) {
-      return " h-16 w-16 fill-current text-amber-300";
+      return " h-16 w-16 fill-current text-amber-300  transition-all ease-out duration-1000";
     } else if (scoreCount === 7 || scoreCount === 8 || scoreCount === 9) {
-      return "h-16 w-16 fill-current text-amber-400";
+      return "h-16 w-16 fill-current text-amber-400  transition-all ease-out duration-1000";
     } else if (scoreCount === 10) {
-      return "h-16 w-16 fill-current text-amber-500";
+      return "h-16 w-16 fill-current text-amber-500  transition-all ease-out duration-1000";
     } else {
-      return "h-16 w-16 fill-current text-amber-50";
+      return "h-16 w-16 fill-current text-amber-50  transition-all ease-out duration-1000";
     }
   }
 
@@ -29,18 +29,18 @@ function ProgressBar({ scoreCount }) {
 
   return (
     <div>
-      <div className="w-9/12 m-auto">
+      <div className="m-auto">
         <StarIcon
           className={starClass}
           style={{ marginLeft: `${progressPercentage}%` }}
         />
       </div>
-      <div className="mt-0 self-start justify-self-center place-self-center m-auto w-9/12 bg-gray-200 rounded-full h-10 dark:bg-gray-700">
+      <div className="mt-0 m-auto bg-gray-200 rounded-full h-10">
         <div
-          className="progress bg-green-400 rounded-full h-full"
+          className="bg-green-400 rounded-full h-full transition-all ease-out duration-1000"
           style={{ width: `${progressPercentage}%` }}
         />
-        <div className="ml-4 text-sm text-right font-semibold text-gray-600 dark:text-gray-400">
+        <div className="ml-4 text-sm text-right font-semibold">
           {`${scoreCount}/10`}
         </div>
       </div>

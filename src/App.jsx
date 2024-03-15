@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+
+
 import Home from "./pages/Home"
 import Score from "./pages/Score"
 import Navbar from "./components/Navbar"
@@ -6,8 +8,9 @@ import Footer from "./components/Footer"
 import Cards from "./components/Cards"
 import FlagGame from "./components/FlagGame"
 import Explore from "./pages/Explore"
-import Capitals from "./components/countryCapitals"
-import MathGame from "./components/MathGame"
+import Quizquestion from "./components/quizQuestionGenerator"
+import Videos from "./components/VideoPlayer"
+
 
 function App() {
   return (
@@ -20,8 +23,9 @@ function App() {
           <Route path="/score" element={<Score />} />
           <Route path="/memory" element={<Cards />} />
           <Route path="/countries" element={<FlagGame />} />
-          <Route path="/capitals" element={<Capitals />} />
-          <Route path="/math" element={<MathGame />} />
+          <Route path="/quiz/:type" element={<Quizquestion />} />
+          <Route path="/videos/:type" element={<Videos />}/>
+
         </Routes>
         <Footer />
       </div>
