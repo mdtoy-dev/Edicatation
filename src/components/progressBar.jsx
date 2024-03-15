@@ -71,6 +71,6 @@ const ProgressBar = ({scoreCount}) => {
 // Define propTypes for the ProgressBar component
 ProgressBar.propTypes = {
 	scoreCount: PropTypes.number.isRequired, // Define scoreCount as a required number prop
-}
+  
 
 export default ProgressBar
