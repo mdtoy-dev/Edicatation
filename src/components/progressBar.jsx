@@ -29,15 +29,15 @@ function ProgressBar({ scoreCount }) {
 
   return (
     <div>
-      <div className="w-9/12 m-auto">
+      <div className="m-auto">
         <StarIcon
           className={starClass}
           style={{ marginLeft: `${progressPercentage}%` }}
         />
       </div>
-      <div className="mt-0 self-start justify-self-center place-self-center m-auto w-9/12 bg-gray-200 rounded-full h-10 dark:bg-gray-700">
+      <div className="mt-0 m-auto bg-gray-200 rounded-full h-10">
         <div
-          className="progress bg-green-400 rounded-full h-full transition-all ease-out duration-1000"
+          className="bg-green-400 rounded-full h-full transition-all ease-out duration-1000"
           style={{ width: `${progressPercentage}%` }}
         />
         <div className="ml-4 text-sm text-right font-semibold">
