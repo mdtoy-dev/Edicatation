@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import PropTypes from 'prop-types'
+import StarIcon from "@heroicons/react/16/solid/StarIcon";
 
 const ProgressBar = ({scoreCount}) => {
 	// Calculate progress percentage based on scoreCount
