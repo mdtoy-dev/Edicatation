@@ -50,7 +50,7 @@ function FlagGame() {
       setInitialVisibleItems()
       setScore(score + 10)
     } else {
-      setScore(score - 5)
+      setScore(0)
     }
   }
 
@@ -59,7 +59,7 @@ function FlagGame() {
   return (
     <div className="container mx-auto mt-8 text-center">
       <h1 className="mb-10 text-2xl">SCORE: {score}</h1>
-      <div className="flex flex-row">
+      <div className="grid grid-cols-2 gap-7 max-w-2xl mx-auto my-auto">
         <div className="flex-1">
           {visiblePairs.map((pair) => (
             <div

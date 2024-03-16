@@ -11,6 +11,10 @@ function Explore (){
     }, { 
         name: "Countries", 
         link: "/countries",
+    },
+    {
+        name: "Math",
+        link: "/math",
     }
 ]
     
