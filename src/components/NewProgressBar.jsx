@@ -1,12 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const NewProgressBar = () => {
-	const [progress, setProgress] = useState(percentage)
-
+const NewProgressBar = ({percentage}) => {
 	return (
 		<div className='progress-bar-container'>
-			<div className='progress-bar' style={{width: `${progress}%`}}>
-				<span className='progress-label'>{`${progress}%`}</span>
+			<div className='progress-bar' style={{width: `${percentage}%`}}>
+				<span className='progress-label'>{`${percentage}%`}</span>
 			</div>
 		</div>
 	)
