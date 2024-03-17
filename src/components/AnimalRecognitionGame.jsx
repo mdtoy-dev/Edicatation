@@ -27,6 +27,7 @@ import roosterSound from '../assets/sounds/rooster-calling.mp3'
 import sheepSound from '../assets/sounds/sheep-sounds.mp3'
 import tigerSound from '../assets/sounds/tiger-roar.mp3'
 
+// Define an array of objects representing different animals
 const animals = [
 	{name: 'cat', image: catImage, sound: catSound},
 	{name: 'chicken', image: chickenImage, sound: chickenSound},
@@ -43,16 +44,22 @@ const animals = [
 	{name: 'tiger', image: tigerImage, sound: tigerSound},
 ]
 
+// Define the Game component
 const Game = () => {
 	const [question, setQuestion] = useState('')
 	const [selectedAnimal, setSelectedAnimal] = useState(null)
 
+	// Define a function to generate a random question
 	const generateQuestion = () => {
+		// Select a random animal from the animals array and set question to ask the user
 		const randomAnimal = animals[Math.floor(Math.random() * animals.length)]
 		setQuestion(`What animal makes this sound?`)
+
+		// Set the selected animal for the current question
 		setSelectedAnimal(randomAnimal)
 	}
 
+	// Define a function to handle click events on animal cards
 	const handleAnimalClick = () => {
 		if (animals.name === selectedAnimal.name) {
 			new Audio(animals.sound.default).play()
@@ -61,6 +68,8 @@ const Game = () => {
 			setQuestion('Try again!')
 		}
 	}
+
+	// Render the component
 	return (
 		<div>
 			<h1>Animal Game</h1>
