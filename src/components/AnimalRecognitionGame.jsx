@@ -61,6 +61,29 @@ const Game = () => {
 			setQuestion('Try again!')
 		}
 	}
+	return (
+		<div>
+			<h1>Animal Game</h1>
+			{question ? (
+				<div>
+					<p>{question}</p>
+					{selectedAnimal && (
+						<div>
+							{animals.map((animal, index) => (
+								<AnimalCard
+									key={index}
+									image={animal.image}
+									onClick={() => handleAnimalClick(animal)}
+								/>
+							))}
+						</div>
+					)}
+				</div>
+			) : (
+				<button onClick={generateQuestion}>Start Game</button>
+			)}
+		</div>
+	)
 }
 
 export default Game
