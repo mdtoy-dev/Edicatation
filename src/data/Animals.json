@@ -1,1 +1,54 @@
-[{}]
+[
+
+    {
+       "question": "What is the largest mammal in the world?",
+        "correct": "Blue whale",
+        "incorrect": ["Elephant", "Giraffe", "Hippopotamus"]
+     },
+    {
+        "question": "Which bird is known for its ability to mimic human speech?",
+        "correct": "Parrot",
+        "incorrect": ["Eagle", "Ostrich", "Penguin"]
+    },
+    {
+            "question": "What is the fastest land animal?",
+            "correct": "Cheetah",
+            "incorrect": ["Lion", "Gazelle", "Leopard"]
+        },
+    {
+        "question": "What kind of animal is a seahorse?",
+        "correct": "Fish",
+        "incorrect": ["Crustacean", "Mammal", "Reptile"]
+        },
+    {
+        "question": "What is the only continent without native reptiles or snakes?",
+        "correct": "Antarctica",
+        "incorrect": ["Australia", "Africa", "North America"]
+       },
+    {
+        "question": "Which animal is known for its ability to change color to blend in with its surroundings?",
+        "correct": "Chameleon",
+        "incorrect": ["Frog", "Lizard", "Octopus"]
+    },
+    {
+        "question": "What is the largest living primate?",
+        "correct": "Gorilla",
+        "incorrect": ["Chimpanzee", "Orangutan", "Baboon"]
+    },
+    {
+        "question": "What is a group of lions called?",
+        "correct": "Pride",
+        "incorrect": ["Pack", "Flock", "Herd"]
+    },
+    {
+        "question": "What is the only mammal capable of sustained flight?",
+        "correct": "Bat",
+        "incorrect": ["Bird", "Flying squirrel", "Pterosaur"]
+    },
+    {
+        "question": "Which animal is known as the 'ship of the desert'?",
+        "correct": "Camel",
+        "incorrect": ["Elephant", "Horse", "Donkey"]
+    }
+
+]

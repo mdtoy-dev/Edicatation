@@ -15,7 +15,11 @@ const urlMapping ={
 
     animalSounds: "https://www.youtube.com/watch?v=YCvzPBUPZ9w",
     colours: "https://www.youtube.com/watch?v=qhOTU8_1Af4",
-    rhymes: "https://www.youtube.com/watch?v=buE6l32rCHo"
+    rhymes: "https://www.youtube.com/watch?v=buE6l32rCHo",
+    birds:"https://www.youtube.com/watch?v=WhRpW0cVmds",
+    numbers:"https://www.youtube.com/watch?v=7D4K9oi7oBM",
+    phonics:"https://www.youtube.com/watch?v=BELlZKpi1Zs"
+
 }
 
 // Function to set the URL based on the type

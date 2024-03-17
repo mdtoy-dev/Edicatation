@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 body {
-	background-color: rgb(6 182 212)
+	/*background-color: rgb(6 182 212)*/
+
+	background-image: url('./assets/kidBg.png');
+    background-size: cover;
+    background-position: center;
+
 }
 
