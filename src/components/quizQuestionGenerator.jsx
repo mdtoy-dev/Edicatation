@@ -6,6 +6,7 @@ import ProgressBar from "./progressBar";
 import { useParams } from "react-router-dom";
 
 
+
 /*Merge the correct and incorrect answers and shuffle's to display  */
 const shuffleAnswer = (question) => {
 const answer = [question.correct, ...question.incorrect];
@@ -38,7 +39,6 @@ function quizQuestionGenerator() {
   useEffect(() => {
        (async () => {
         const value = (await import(`../data/${type}.json`));
-        console.log(value.default);
         const question = value.default[currentQuestionIndex];
         setCurrentQuestion(question);
         setAnswer(shuffleAnswer(question));
@@ -79,8 +79,9 @@ function quizQuestionGenerator() {
             
   }
   
-  
+    
   return (
+    <div className=" bg-[url('src/assets/quizBg.jpg')] bg-cover h-screen">
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-md p-6">
         <div className="text-center font-bold text-lg mb-2">
@@ -105,6 +106,7 @@ function quizQuestionGenerator() {
         </div>
         <ProgressBar scoreCount={scoreCount} />
       </div>
+    </div>
     </div>
   );
 }
