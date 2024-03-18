@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import AnimalCard from './AnimalCard'
 import catImage from '../assets/animals/cat.jpg'
-import chickenImage from '../assets/animals/chicken.jpg'
 import cowImage from '../assets/animals/cow.jpg'
 import dogImage from '../assets/animals/dog.jpg'
 import eagleImage from '../assets/animals/eagle.jpg'
@@ -14,15 +13,14 @@ import roosterImage from '../assets/animals/rooster.jpg'
 import sheepImage from '../assets/animals/sheep.jpg'
 import tigerImage from '../assets/animals/tiger.jpg'
 import catSound from '../assets/sounds/little-cat-meow.mp3'
-import chickenSound from '../assets/animals/chicken-clucking.mp3'
+import henSound from '../assets/sounds/hen-clucking.mp3'
 import cowSound from '../assets/sounds/cow-moo.mp3'
-import dogSound from './assets/sounds/dog-growling.mp3'
+import dogSound from '../assets/sounds/dog-growling.mp3'
 import eagleSound from '../assets/sounds/wild-eagle-calling.mp3'
 import goatSound from '../assets/sounds/goat-baa-stutter.mp3'
-import henSound from '../assets/sounds/hen-clucking.mp3'
 import lionSound from '../assets/sounds/wild-lion-roar.mp3'
 import monkeySound from '../assets/sounds/little-monkey-screech.mp3'
-import pigSound from '../assets/sounds/little-monkey-screech'
+import pigSound from '../assets/sounds/pig-grunt.mp3'
 import roosterSound from '../assets/sounds/rooster-calling.mp3'
 import sheepSound from '../assets/sounds/sheep-sounds.mp3'
 import tigerSound from '../assets/sounds/tiger-roar.mp3'
@@ -30,7 +28,7 @@ import tigerSound from '../assets/sounds/tiger-roar.mp3'
 // Define an array of objects representing different animals
 const animals = [
 	{name: 'cat', image: catImage, sound: catSound},
-	{name: 'chicken', image: chickenImage, sound: chickenSound},
+	{name: 'hen', image: henImage, sound: henSound},
 	{name: 'cow', image: cowImage, sound: cowSound},
 	{name: 'dog', image: dogImage, sound: dogSound},
 	{name: 'eagle', image: eagleImage, sound: eagleSound},

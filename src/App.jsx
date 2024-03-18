@@ -12,6 +12,7 @@ import Quizquestion from './components/quizQuestionGenerator'
 import Videos from './components/VideoPlayer'
 import MathGame from './components/MathGame'
 import NewProgressBar from './components/NewProgressBar'
+import AnimalRecognitionGame from './components/AnimalRecognitionGame'
 
 function App() {
 	const [progress, setProgress] = useState(0)
@@ -38,6 +39,10 @@ function App() {
 					<Route path='/quiz/:type' element={<Quizquestion />} />
 					<Route path='/videos/:type' element={<Videos />} />
 					<Route path='/math' element={<MathGame />} />
+					<Route
+						path='AnimalCard'
+						element={<AnimalRecognitionGame />}
+					/>
 				</Routes>
 				<Footer />
 			</div>
