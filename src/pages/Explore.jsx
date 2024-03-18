@@ -11,7 +11,11 @@ function Explore (){
     }, { 
         name: "Countries", 
         link: "/countries",
+    }, {
+        name: "Math Game",
+        link: "/math"
     }
+
 ]
     
     const quizes = [
