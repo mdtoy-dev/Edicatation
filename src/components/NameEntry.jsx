@@ -33,7 +33,7 @@ function NameEntry() {
       {showInput ? (
       <div>
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:mt-3">
-        <p className="sm:text-3xl font-semibold mb-4 drop-shadow-[0_1px_1px_rgba(0,0,0,0.8)] text-center text-orange-700">But first things first, what is your name?</p>
+        <p className="sm:text-3xl font-semibold mb-4 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-center text-orange-400">But first things first, what is your name?</p>
         <input
         type="text"
         placeholder={errorMessage}
