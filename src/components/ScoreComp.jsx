@@ -26,9 +26,6 @@ function Score({ scoreCount }) {
   <div>
 
           <Confetti />
-    {showButton ? (
-    <div className="flex items-center justify-center h-screen">
-      <div className="bg-gray-100 p-8 rounded-md shadow-md">
     {showButton ? (<div className="flex items-center justify-center h-screen">
       <div className="bg-white rounded-md shadow-md w-full p-3 m-3 sm:h-1/3 sm:w-1/3 sm:p-8">
     
