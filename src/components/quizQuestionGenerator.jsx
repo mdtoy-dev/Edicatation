@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import questions from "../data/CountryCapitals.json";
-import Score from "../pages/Score";
+import Score from "./ScoreComp";
 import ProgressBar from "./progressBar";
 import { useParams } from "react-router-dom";
 

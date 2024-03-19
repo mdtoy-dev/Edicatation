@@ -25,7 +25,7 @@ function Navbar() {
   const navigation = [
     { name: 'Home', href: '/', current: true, visible: true },
     { name: 'Explore', href: '/explore', current: false, visible: buttonAppear },
-    { name: 'Scores', href: '/score', current: false, visible: buttonAppear },
+    { name: 'Scores', href: '/scoreList', current: false, visible: buttonAppear },
   ]
   
   function classNames(...classes) {
