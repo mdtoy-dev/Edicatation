@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Confetti from 'react-confetti'
 
 
 const scoreList = []
@@ -23,7 +24,9 @@ function Score({ scoreCount }) {
   
   return (
   <div>
-    {showButton ? (<div className="flex items-center justify-center h-screen">
+          <Confetti />
+    {showButton ? (
+    <div className="flex items-center justify-center h-screen">
       <div className="bg-gray-100 p-8 rounded-md shadow-md">
     
       <div className="text-4xl font-bold mb-4">
