@@ -55,7 +55,7 @@ function Cards() {
 
 
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-4 max-w-5xl mx-auto my-auto">
       {items.map((color, index) => (
         <Card
           key={index}
