@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Score from "./pages/Score";
+import Score from "./components/ScoreComp";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Cards from "./components/Cards";
@@ -10,6 +10,7 @@ import Explore from "./pages/Explore";
 import Quizquestion from "./components/quizQuestionGenerator";
 import Videos from "./components/VideoPlayer";
 import MathGame from "./components/MathGame";
+import ScoreList from "./pages/Score";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/quiz/:type" element={<Quizquestion />} />
           <Route path="/videos/:type" element={<Videos />} />
           <Route path="/math" element={<MathGame />} />
+          <Route path="/scoreList" element={<ScoreList />} />
         </Routes>
         <Footer />
       </div>
