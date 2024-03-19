@@ -18,7 +18,7 @@ function Navbar() {
     } else {
       setButtonAppear(false)
     }
-  }, [NameEntry]);
+  });
 
   
   
