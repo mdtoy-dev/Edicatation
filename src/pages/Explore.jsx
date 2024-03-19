@@ -78,7 +78,6 @@ return (
             <Link 
                 key={index}
                 to={game.link}
-                onClick={subjectStorage}
                 className={"w-3/5 h-14 md:h-36 m-auto my-6 flex bg-red-400 border border-4 border-red-500 rounded-lg shadow-md shadow-red-600 transition ease-in-out delay-150, hover:bg-orange-500 hover:border-red-600 hover:-translate-y-1 hover:scale-110 duration-300 "}
             >
                 <h5 className="text-xl text-orange-100 m-auto font-semibold drop-shadow-2xl subpixel-antialiased">{game.name}</h5>
