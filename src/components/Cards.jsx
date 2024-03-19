@@ -22,6 +22,8 @@ function Cards() {
 
   const [prev, setPrev] = useState(-1)
 
+ 
+
   function handleClick(index) {
     if (prev === -1) {
       items[index].stat = "active"
@@ -55,7 +57,13 @@ function Cards() {
 
 
   return (
-    <div className="grid grid-cols-4">
+    <div>
+      <div className=" mt-10 flex flex-col items-center justify-center ">
+      <h1 className="text-4xl font-bold animate-change-color ">Match the colours</h1>      
+      </div>
+    <div className="flex mb-4 justify-center items-center h-screen">
+    <div className="max-w-xl border-4 border-ivory-400 bg-white rounded-lg shadow-md p-8">
+    <div className="grid grid-cols-4 max-w-5xl mx-auto my-auto gap-4">
       {items.map((color, index) => (
         <Card
           key={index}
@@ -65,6 +73,9 @@ function Cards() {
           handleClick={handleClick}
         />
       ))}
+    </div>
+    </div>
+    </div>
     </div>
   )
 }
