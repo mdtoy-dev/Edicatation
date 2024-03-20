@@ -51,6 +51,12 @@ function Score({ scoreCount }) {
                   >
                     Discover more topics
                     </Link>
+                    <Link
+                  to="/scoreList"
+                  className="m-auto my-2 mx-10 flex justify-center bg-orange-500 hover:bg-cyan-700 text-cyan-50 font-bold py-2 px-10 rounded"
+                  >
+                  Scoreboard
+                    </Link>
                     </div>
                     </div>
                     )
