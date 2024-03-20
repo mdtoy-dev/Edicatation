@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import questions from "../data/CountryCapitals.json";
-import Score from "../pages/Score";
+import Score from "./ScoreComp";
 import ProgressBar from "./progressBar";
 import { useParams } from "react-router-dom";
 
@@ -82,7 +82,7 @@ function quizQuestionGenerator() {
     
   return (
     <div className=" bg-[url('src/assets/quizBg.jpg')] bg-cover h-screen">
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-md p-6">
         <div className="text-center font-bold text-lg mb-2">
           Questions: {currentQuestionIndex + 1}/{questions.length}

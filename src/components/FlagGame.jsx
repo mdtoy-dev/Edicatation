@@ -54,24 +54,25 @@ function FlagGame() {
     }
   }
 
-  const selectedStyle = "bg-blue-200"
+  const selectedStyle = "bg-green-200"
 
   return (
-    <div className="container mx-auto mt-8 text-center">
-      <h1 className="mb-10 text-2xl">SCORE: {score}</h1>
+    <div className="container mx-auto mt-8 min-h-screen text-center items-center">
+      <h1 className="mb-10 text-2xl font-bold text-red-500 animate-bounce">SCORE: {score}</h1>
       <div className="flex flex-row">
         <div className="flex-1">
           {visiblePairs.map((pair) => (
             <div
               key={pair.country.id}
-              className={`p-4 border border-gray-300 rounded cursor-pointer transition-colors ${
+              className={`p-4 border-2 border-green-600 rounded cursor-pointer bg-yellow-300 transition-transform transform 
+                          hover:-translate-y-1 hover:shadow-lg hover:bg-orange-300 ${
                 selectedCountry && selectedCountry.id === pair.country.id
                   ? selectedStyle
                   : ""
               }`}
               onClick={() => selectCountry(pair.country)}
             >
-              {pair.country.name}
+          <span className="text-lg font-bold">{pair.country.name}</span>
             </div>
           ))}
         </div>
@@ -79,14 +80,17 @@ function FlagGame() {
           {visiblePairs.map((pair) => (
             <div
               key={pair.flag.id}
-              className={`p-4 border border-gray-300 rounded cursor-pointer transition-colors ${
+              className={`p-4 border-2 border-green-600 rounded cursor-pointer 
+                        bg-yellow-300 transition-transform transform hover:-translate-y-1  
+                         hover:shadow-lg hover:bg-orange-300
+               ${
                 selectedFlag && selectedFlag.id === pair.flag.id
                   ? selectedStyle
                   : ""
               }`}
               onClick={() => selectFlag(pair.flag)}
             >
-              {pair.flag.flag_emoji}
+        <span className="text-lg font-bold">{pair.flag.flag_emoji}</span>
             </div>
           ))}
         </div>
