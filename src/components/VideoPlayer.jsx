@@ -41,10 +41,10 @@ useEffect(()=> {
 
 
 return(<>
-          <div className="flex justify-center items-center">
-          <h3 className="text-3xl mb-8">Watch Station</h3>
+          <div className="flex flex-col justify-center items-center">
+          <h3 className="text-5xl text-white font-bold mb-8 sm:mb-8">Watch Station</h3>
           </div> 
-        <div className="flex justify-center items-center h-screen">
+        <div className=" flex justify-center items-center h-screen  sm:w-auto">
         <ReactPlayer ref={playerRef} url={urlType} controls={true} />   
         </div>  
         </>  
