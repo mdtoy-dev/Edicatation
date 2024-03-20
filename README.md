@@ -1,6 +1,9 @@
 # Edicatation
 https://edicatation.netlify.app/
 Edicatation is a kids' education website designed to make learning fun and interactive. It offers a variety of games, quizzes, and learning materials to engage children in an enjoyable educational experience.
+
+![alt text](edicatation.gif)
+
 ## Features
 - Games: Interactive games to reinforce learning in various subjects such as math, countries, memory, and more.
 - Quizzes: Engaging quizzes to test children's knowledge and track their progress.
