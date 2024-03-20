@@ -81,7 +81,8 @@ function quizQuestionGenerator() {
   
     
   return (
-    <div className=" bg-cover h-screen" style={{backgroundImage: "url(src/assets/quizBg.jpg)"}}>
+    <div className=" bg-cover h-screen">
+      <p className="text-5xl text-center text-white font-bold mt-4 ">{type} Quiz</p>
     <div className="flex flex-col items-center justify-center min-h-screen ">
       <div className="w-full max-w-2xl bg-white shadow-md rounded-md p-6">
         <div className="text-center font-bold text-lg mb-2">

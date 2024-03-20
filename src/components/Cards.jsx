@@ -59,11 +59,11 @@ function Cards() {
   return (
     <div>
       <div className=" mt-10 flex flex-col items-center justify-center ">
-      <h1 className="text-4xl font-bold animate-change-color ">Match the colours</h1>      
+      <h1 className="text-6xl font-extrabold animate-change-color ">Match the colours</h1>      
       </div>
     <div className="flex mb-4 justify-center items-center h-screen">
     <div className="max-w-xl border-4 border-ivory-400 bg-white rounded-lg shadow-md p-8">
-    <div className="grid grid-cols-4 max-w-5xl mx-auto my-auto gap-4">
+    <div className="grid grid-cols-4 max-w-5xl mx-auto my-auto gap-2">
       {items.map((color, index) => (
         <Card
           key={index}
