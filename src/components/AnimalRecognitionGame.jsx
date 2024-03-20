@@ -61,10 +61,11 @@ const AnimalRecognitionGame = () => {
 	}
 
 	// Define a function to handle click events on animal cards
-	const handleAnimalClick = () => {
-		if (animals.name === selectedAnimal.name) {
-			new Audio(animals.sound.default).play()
+	const handleAnimalClick = clickedAnimal => {
+		if (clickedAnimal.sound === selectedAnimal.sound) {
+			new Audio(clickedAnimal.sound).play()
 			setQuestion('Correct! Play again?')
+			setSelectedAnimal(null)
 		} else {
 			setQuestion('Try again!')
 		}
@@ -72,14 +73,14 @@ const AnimalRecognitionGame = () => {
 
 	// Render the component
 	return (
-		<div className='anima-game'>
+		<div className='animal-game'>
 			<h1>Animal Recognition Game</h1>
 			{question ? (
 				<div>
 					<p>{question}</p>
 					{selectedAnimal && (
 						<div className='w-24'>
-							{animals.map((animal, index) => (
+							{animals.map(animal => (
 								<AnimalCard
 									key={animal.name}
 									image={animal.image}
@@ -98,6 +99,7 @@ const AnimalRecognitionGame = () => {
 			) : (
 				<button onClick={generateQuestion}>Start Game</button>
 			)}
+
 			<ReactPlayer url={tigerSound} />
 		</div>
 	)
