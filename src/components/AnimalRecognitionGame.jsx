@@ -71,6 +71,12 @@ const AnimalRecognitionGame = () => {
 		}
 	}
 
+	// Function to handle play again
+	const handlePlayAgain = () => {
+		setQuestion('')
+		generateQuestion()
+	}
+
 	// Render the component
 	return (
 		<div className='animal-game'>
@@ -95,6 +101,7 @@ const AnimalRecognitionGame = () => {
 							)}
 						</div>
 					)}
+					<button onClick={handlePlayAgain}>Play Again</button>
 				</div>
 			) : (
 				<button onClick={generateQuestion}>Start Game</button>
