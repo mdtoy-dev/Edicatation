@@ -25,7 +25,7 @@ import monkeySound from '../assets/sounds/monkey-sound.mp3'
 import pigSound from '../assets/sounds/pig-sound.mp3'
 import roosterSound from '../assets/sounds/rooster-sound.mp3'
 import sheepSound from '../assets/sounds/sheep-sound.mp3'
-import elephantSound from '../assets/sounds/elephent-sound.mp3'
+import elephantSound from '../assets/sounds/elephant-sound.mp3'
 import frogSound from '../assets/sounds/frog-sound.mp3'
 
 // Define an array of objects representing different animals
