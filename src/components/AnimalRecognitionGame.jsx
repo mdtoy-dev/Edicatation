@@ -44,7 +44,7 @@ const animals = [
 ]
 
 // Define the Game component
-const Game = () => {
+const AnimalRecognitionGame = () => {
 	const [question, setQuestion] = useState('')
 	const [selectedAnimal, setSelectedAnimal] = useState(null)
 
@@ -56,7 +56,7 @@ const Game = () => {
 
 		// Set the selected animal for the current question
 		setSelectedAnimal(randomAnimal)
-		new Audio(selectedAnimal.sound).play()
+		new Audio(randomAnimal.sound).play()
 		// new Audio(selectedAnimal.sound.default).play()
 	}
 
@@ -72,8 +72,8 @@ const Game = () => {
 
 	// Render the component
 	return (
-		<div>
-			<h1>Animal Game</h1>
+		<div className='anima-game'>
+			<h1>Animal Recognition Game</h1>
 			{question ? (
 				<div>
 					<p>{question}</p>
@@ -81,11 +81,17 @@ const Game = () => {
 						<div className='w-24'>
 							{animals.map((animal, index) => (
 								<AnimalCard
-									key={index}
+									key={animal.name}
 									image={animal.image}
 									onClick={() => handleAnimalClick(animal)}
 								/>
 							))}
+							{selectedAnimal && (
+								<ReactPlayer
+									url={selectedAnimal.sound}
+									controls // Show default controls (play, pause, etc.)
+								/>
+							)}
 						</div>
 					)}
 				</div>
@@ -97,4 +103,4 @@ const Game = () => {
 	)
 }
 
-export default Game
+export default AnimalRecognitionGame
