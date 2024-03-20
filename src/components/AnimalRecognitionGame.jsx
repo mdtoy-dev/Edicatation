@@ -12,7 +12,8 @@ import monkeyImage from '../assets/animals/monkey.jpg'
 import pigImage from '../assets/animals/pig.jpg'
 import roosterImage from '../assets/animals/rooster.jpg'
 import sheepImage from '../assets/animals/sheep.jpg'
-import tigerImage from '../assets/animals/tiger.jpg'
+import elephantImage from '../assets/animals/elephant.jpg'
+import frogImage from '../assets/animals/frog.jpg'
 import catSound from '../assets/sounds/cat-sound.mp3'
 import cowSound from '../assets/sounds/cow-sound.mp3'
 import dogSound from '../assets/sounds/dog-sound.mp3'
@@ -24,7 +25,8 @@ import monkeySound from '../assets/sounds/monkey-sound.mp3'
 import pigSound from '../assets/sounds/pig-sound.mp3'
 import roosterSound from '../assets/sounds/rooster-sound.mp3'
 import sheepSound from '../assets/sounds/sheep-sound.mp3'
-import tigerSound from '../assets/sounds/tiger-sound.mp3'
+import elephantSound from '../assets/sounds/elephent-sound.mp3'
+import frogSound from '../assets/sounds/frog-sound.mp3'
 
 // Define an array of objects representing different animals
 const animals = [
@@ -40,7 +42,8 @@ const animals = [
 	{name: 'pig', image: pigImage, sound: pigSound},
 	{name: 'rooster', image: roosterImage, sound: roosterSound},
 	{name: 'sheep', image: sheepImage, sound: sheepSound},
-	{name: 'tiger', image: tigerImage, sound: tigerSound},
+	{name: 'elephant', image: elephantImage, sound: elephantSound},
+	{name: 'frog', image: frogImage, sound: frogSound},
 ]
 
 // Define the Game component
@@ -107,7 +110,7 @@ const AnimalRecognitionGame = () => {
 				<button onClick={generateQuestion}>Start Game</button>
 			)}
 
-			<ReactPlayer url={tigerSound} />
+			<ReactPlayer url={frogSound} />
 		</div>
 	)
 }
