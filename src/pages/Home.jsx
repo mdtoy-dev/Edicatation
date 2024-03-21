@@ -4,7 +4,7 @@ import NameEntry from "../components/NameEntry"
 
 const Home = () => {
   return (
-  <div className="flex flex-col sm:flex-row">
+  <div className="flex flex-col m-16 sm:flex-row">
     <img src={logo} alt="logo" className="w-1/3 m-auto drop-shadow-2xl" />
     <div className="bg-white bg-opacity-50 drop-shadow p-10 border border-none rounded-xl grid grid-cols-1 m-8 sm:m-20">
       <div className="m-auto sm:text-xl p-6, text-center text-cyan-600 rounded-lg drop-shadow-[0_0.5px_0.5px_rgba(0,0,0,0.8)]">
