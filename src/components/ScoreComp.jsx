@@ -24,7 +24,6 @@ function Score({ scoreCount }) {
   
   return (
   <div>
-
           <Confetti />
     {showButton ? (<div className="flex items-center justify-center h-screen">
       <div className="bg-white rounded-md shadow-md w-full p-3 m-3 sm:h-1/3 sm:w-1/3 sm:p-8">
@@ -53,13 +52,18 @@ function Score({ scoreCount }) {
         >
           Discover more topics
           </Link>
+        <Link
+        to="/scoreList"
+        className="m-auto my-2 mx-10 flex justify-center bg-orange-500 hover:bg-cyan-700 text-cyan-50 font-bold py-2 px-10 rounded"
+        >
+          Scoreboard
+        </Link>
       </div> 
     </div>
     )
     }
   </div>
   );
+
 }
-
-
 export default Score;
