@@ -1,7 +1,7 @@
 # Edicatation
 
 ## Description
-https://edicatation.netlify.app/
+
 Edicatation is a kids' education website designed to make learning fun and interactive. It offers a variety of games, quizzes, and learning materials to engage children in an enjoyable educational experience.
 
 
@@ -12,7 +12,7 @@ Edicatation is a kids' education website designed to make learning fun and inter
 
 ## Table of Contents
 
--   [](#edicatation)
+-   [Edicatation](#edicatation)
 -   [Description](#decription)
 -   [Features](#features)
 -   [Technology Used](#technology-used)
@@ -30,8 +30,11 @@ Edicatation is a kids' education website designed to make learning fun and inter
 - Vite: Used as the build tool to enhance the development experience with fast builds and hot module replacement.
 ## Deployment
 Edicatation is deployed using Netlify, providing continuous deployment and hosting capabilities.
+View deployed App here: https://edicatation.netlify.app/
+
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/mdtoy-dev/Edicatation?tab=MIT-1-ov-file) file for details.
+
 ## Screenshots
 ![Games](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 ![Quizzes](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
@@ -44,7 +47,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 -   [Netlify](https://www.netlify.com/)
 -   [Node](https://nodejs.org/en)
 -   [Vite](https://vitejs.dev/)
--   [Tailwind](https://tailwindcss.com/)
+-   [Tailwind CSS](https://tailwindcss.com/)
 -   [Express JS Server](https://expressjs.com/en/starter/hello-world.html)
 
 
@@ -56,8 +59,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Additional functionalities: including timers to increase engagement
 
 ## Contributing
+- TBC
 
 ---
 
-© 2024 Berk Vino  Hazal Francis Rhen
+© 2024       Berk Vino Hazal Francis Rhen
 
