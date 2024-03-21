@@ -51,7 +51,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 -   [Vite](https://vitejs.dev/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [Express JS Server](https://expressjs.com/en/starter/hello-world.html)
--   [ReactPlayer](https://www.npmjs.com/package/react-player)
 -   [Confetti](https://www.npmjs.com/package/react-confetti)
 
 
