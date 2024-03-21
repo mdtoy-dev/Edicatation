@@ -64,7 +64,6 @@ when the user finishes the quiz , they will be displayed with their score , opti
 -   [Vite](https://vitejs.dev/)
 -   [Tailwind](https://tailwindcss.com/)
 -   [Express JS Server](https://expressjs.com/en/starter/hello-world.html)
--   [ReactPlayer](https://www.npmjs.com/package/react-player)
 -   [Confetti](https://www.npmjs.com/package/react-confetti)
 
 
