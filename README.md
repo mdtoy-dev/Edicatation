@@ -37,14 +37,9 @@ View deployed App here: https://edicatation.netlify.app/
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/mdtoy-dev/Edicatation?tab=MIT-1-ov-file) file for details.
 
-## Screenshots
-![Games](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![Quizzes](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-![Videos](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
 ## List of third-party assets.
 
--   [React Player](https://www.npmjs.com/package/react-player)
+-   [ReactPlayer](https://www.npmjs.com/package/react-player)
 -   [ReactJs](https://react.dev/)
 -   [Netlify](https://www.netlify.com/)
 -   [Node](https://nodejs.org/en)
