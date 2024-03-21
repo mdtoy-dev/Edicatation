@@ -18,7 +18,7 @@ Edicatation is a kids' education website designed to make learning fun and inter
 -   [Technology Used](#technology-used)
 -   [Deployment](#deployment)
 -   [License](#license)
--   [Screenshots](#screenshots)
+-   [Demo](#demo)
 -   [List of Third Party Assets](#list-of-third-party-assets)
 -   [Roadmap](#roadmap)
 -   [Contributing](#contributing)
@@ -28,6 +28,8 @@ Edicatation is a kids' education website designed to make learning fun and inter
 - React: Utilized for building the frontend components, providing a dynamic and responsive user interface.
 - Tailwind CSS: Utilized for styling the website, enabling rapid development and customization.
 - Vite: Used as the build tool to enhance the development experience with fast builds and hot module replacement.
+
+
 ## Deployment
 Edicatation is deployed using Netlify, providing continuous deployment and hosting capabilities.
 View deployed App here: https://edicatation.netlify.app/
@@ -49,6 +51,8 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 -   [Vite](https://vitejs.dev/)
 -   [Tailwind CSS](https://tailwindcss.com/)
 -   [Express JS Server](https://expressjs.com/en/starter/hello-world.html)
+-   [ReactPlayer](https://www.npmjs.com/package/react-player)
+-   [Confetti](https://www.npmjs.com/package/react-confetti)
 
 
 ## Roadmap
@@ -64,4 +68,5 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ---
 
 © 2024       Berk Vino Hazal Francis Rhen
+
 
